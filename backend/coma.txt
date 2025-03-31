@@ -1,0 +1,1 @@
+npm install express mongoose jsonwebtoken bcrypt cors dotenv body-parser multer stripe validator nodemon

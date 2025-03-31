@@ -1,5 +1,5 @@
 import express from "express"
-import { addF } from "../controllers/fControllers.js"
+import { addF,listFood,removeItem } from "../controllers/fControllers.js"
 import multer from "multer"
 
 const fRoutes = express.Router();
@@ -17,6 +17,8 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 fRoutes.post("/add",upload.single("image"),addF)
+fRoutes.get("/list",listFood)
+fRoutes.post("/remove",removeItem)
 
 
 

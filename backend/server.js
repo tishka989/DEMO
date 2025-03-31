@@ -17,6 +17,8 @@ connetcDb();
 
 //api endpoints
 app.use("/api/food", fRoutes)
+app.use("/image",express.static('uploads'))
+
 
 app.get("/",(req,res)=>{
     res.send("API Working")
