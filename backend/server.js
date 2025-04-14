@@ -6,7 +6,7 @@ import fRoutes from "./routes/fRoutes.js"
 
 //app conf
 const app = express()
-const port =5173
+const port =5000
 
 //middleware 
 app.use(express.json())
