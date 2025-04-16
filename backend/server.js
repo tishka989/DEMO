@@ -3,6 +3,10 @@ import cors from "cors"
 import { connetcDb } from "./config/db.js"
 
 import fRoutes from "./routes/fRoutes.js"
+import userRouter from "./routes/userRoute.js"
+import 'dotenv/config'
+import cartRouter from "./routes/cartRoutes.js"
+import orderRouter from "./routes/orderRoute.js"
 
 //app conf
 const app = express()
@@ -18,7 +22,9 @@ connetcDb();
 //api endpoints
 app.use("/api/food", fRoutes)
 app.use("/image",express.static('uploads'))
-
+app.use("/api/user",userRouter)
+app.use("/api/cart",cartRouter)
+app.use("/api/order",orderRouter)
 
 app.get("/",(req,res)=>{
     res.send("API Working")
